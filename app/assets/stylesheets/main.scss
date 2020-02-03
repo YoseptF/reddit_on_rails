@@ -1,0 +1,46 @@
+$black: #1a1a1b;
+$grey: #343536;
+$white: #c3c5c7;
+
+@import "font-awesome";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box
+}
+
+.main-header {
+  font: 14px 'IBM Plex Sans';
+  height: 50px;
+  font-weight: 500;
+  line-height: 18px;
+  background: $black;
+  display: flex;
+  align-items: center;
+  .logo-link {
+    height: 100%;
+    .nav-logo {
+      height: 85%;
+      margin: 4px 20px 0;
+    }
+  }
+  .navigation-menu {
+    width: 270px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    .sub-name {
+      margin-left: 10px;
+    }
+    i{
+      margin-left: auto;
+    }
+    &:hover {
+      border: 2px solid $grey;
+      border-radius: 5px;
+      padding: 5px 18px;
+    }
+  }
+}
