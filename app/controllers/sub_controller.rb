@@ -1,10 +1,11 @@
 class SubController < ApplicationController
   def sub
-    @name = 'subcontroller'
+    @sub_name = params[:sub]
   end
 
   def comments
     @name = 'comments'
+    @sub_name = params[:sub]
   end
 
   def only_id

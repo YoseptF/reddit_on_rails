@@ -1,1 +1,13 @@
-navbar
+<header class='main-header'>
+  <%= link_to  image_tag('re-logo.png', alt: 'nav-logo', class: 'nav-logo'), root_path, class: 'logo-link' %>
+  <div class="navigation-menu">
+    <%= link_to  image_tag('https://via.placeholder.com/22x22'), root_path %>
+    <span class="sub-name">r/<%= @sub_name %></span>
+    <%= fa_icon "sort-down" %>
+  </div>
+  <div class="search-bar">
+    <%= form_with(url: '/search', method: "get") do %>
+      <%= text_field_tag(:q) %>
+    <% end %>
+  </div>
+</header>
