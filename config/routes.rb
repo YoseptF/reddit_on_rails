@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  namespace 'r' do
-    scope shallow_path: "leagueoflegends" do
-      resources :leagueoflegends, shallow: true do
-        resources :comments
-      end
-    end
-  end
+  get "/r/:sub", to: "sub#sub"
+  get "/r/:sub/comments/:id/", to: "sub#only_id"
+  get "/r/:sub/comments/:id/:title", to: "sub#comments"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "home_page#index"
 end

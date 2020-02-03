@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  def temporal_index
+  def hello
     render html: 'Still pending'
   end
 end
