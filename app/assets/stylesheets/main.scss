@@ -1,5 +1,6 @@
-$black: #1a1a1b;
-$grey: #343536;
+$black: rgb(26, 26, 27);
+$grey: #272729;
+$light-grey: #343536;
 $white: #c3c5c7;
 
 @import "font-awesome";
@@ -7,15 +8,16 @@ $white: #c3c5c7;
 * {
   padding: 0;
   margin: 0;
-  box-sizing: content-box
+  box-sizing: content-box;
 }
 
-.main-header {
-  font: 14px 'IBM Plex Sans';
+.main-navnonenone {
+  font: 14px "IBM Plex Sans";
   height: 50px;
   font-weight: 500;
   line-height: 18px;
   background: $black;
+  border-bottom: 1px solid $light-grey;
   display: flex;
   align-items: center;
   .logo-link {
@@ -31,10 +33,13 @@ $white: #c3c5c7;
     display: flex;
     align-items: center;
     padding: 5px 20px;
+    .sub-logo {
+      height: 24px;
+    }
     .sub-name {
       margin-left: 10px;
     }
-    i{
+    i {
       margin-left: auto;
     }
     &:hover {
@@ -43,4 +48,111 @@ $white: #c3c5c7;
       padding: 5px 18px;
     }
   }
+  .search-bar {
+    flex-grow: 1;
+    margin: 0 16px;
+    width: auto;
+    input {
+      background-color: $grey;
+      border-radius: 4px;
+      border: 1px solid $light-grey;
+      box-shadow: none;
+      color: $white;
+      height: 36px;
+      width: 100%;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    .right {
+      // display: flex;
+      display: none;
+      padding-left: 8px;
+    }
+    .left {
+      display: flex;
+      padding-right: 8px;
+      border-right: 1px solid $light-grey;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      border-radius: 2px;
+      fill: $white;
+      height: 16px;
+      line-height: 14px;
+      padding: 8px;
+      width: 16px;
+      &:hover {
+        background-color: $light-grey;
+        outline: none;
+      }
+    }
+    svg {
+      height: 16px;
+    }
+  }
+  .coins {
+    fill: yellow;
+    // display: flex;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 20px;
+    padding: 7px 16px 7px 12px;
+    border: 1px solid yellow;
+    color: $white;
+    &:hover {
+      background: $light-grey;
+    }
+    svg {
+      height: 16px;
+    }
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    button {
+      cursor: pointer;
+      padding: 6px 36px;
+      margin: 0 8px;
+      font: 12px "IBM Plex Sans";
+      font-weight: 500;
+      border-radius: 5px;
+      border: 1px solid white;
+    }
+    .login {
+      background: #ff000000;
+      color: white;
+    }
+    .signup {
+      background-color: white;
+    }
+    .options {
+      display: flex;
+      align-items: center;
+      fill: $white;
+      padding-right: 45px;
+      color: $white;
+      svg {
+        height: 28px;
+      }
+    }
+  }
+}
+
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 228px;
+  width: 100%;
+  height: 228px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -14,7 +14,15 @@ User.create(
 
 Sub.create(
   name: 'leagueoflegends',
-  logo: 'lol.png'
+  logo: 'lol.png',
+  title: 'lol-title.png',
+  banner: 'lol-banner.png'
+)
+Sub.create(
+  name: 'overwatch',
+  logo: 'ovw.png',
+  title: 'ovw-title.png',
+  banner: 'ovw-banner.png'
 )
 
 Join.create(
