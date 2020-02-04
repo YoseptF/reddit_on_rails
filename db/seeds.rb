@@ -9,17 +9,20 @@
 User.create(
   name: 'Joseph Flores',
   user: 'Yosept',
-  description: "I'm a programmer"
+  description: "I'm a programmer",
+  email: "yosept.flores@gmail.com"
 )
 
 Sub.create(
   name: 'leagueoflegends',
+  name_pretty: 'LoL - League of Legends',
   logo: 'lol.png',
   title: 'lol-title.png',
   banner: 'lol-banner.png'
 )
 Sub.create(
   name: 'overwatch',
+  name_pretty: 'Overwatch',
   logo: 'ovw.png',
   title: 'ovw-title.png',
   banner: 'ovw-banner.png'

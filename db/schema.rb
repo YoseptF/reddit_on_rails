@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_02_03_171634) do
 
   create_table "subs", force: :cascade do |t|
     t.string "name"
+    t.string "name_pretty"
     t.string "logo"
     t.string "title"
     t.string "banner"

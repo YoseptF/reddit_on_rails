@@ -1,12 +1,18 @@
 <header class="sub-header">
   <div class="header-container">
-    <%= image_tag(@sub.logo) %>
-    <div class="title">
-    <h1><%= @sub.name %></h1>
-    <h2>r/<%= @sub.name %></h2>
+    <div class="header-wrapper">
+      <%= image_tag(@sub.logo, class: 'header-logo') %>
+      <div class="title-wrapper">
+        <div class="title">
+          <h1><%= @sub.name_pretty %></h1>
+          <h2>r/<%= @sub.name %></h2>
+        </div>
+        <div class="button-wrapper">
+          <button class="btn">
+            JOIN
+          </button>
+        </div>
+      </div>
     </div>
-    <button>
-      JOIN
-    </button>
   </div>
 </header>

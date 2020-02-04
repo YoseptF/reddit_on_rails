@@ -1,18 +1,25 @@
-$black: rgb(26, 26, 27);
-$grey: #272729;
-$light-grey: #343536;
-$white: #c3c5c7;
-
 @import "font-awesome";
+@import "variables";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
-.main-navnonenone {
-  font: 14px "IBM Plex Sans";
+.btn {
+  cursor: pointer;
+  padding: 6px 36px;
+  margin: 0 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.main-nav {
+  font-size: 14px;
   height: 50px;
   font-weight: 500;
   line-height: 18px;
@@ -116,15 +123,6 @@ $white: #c3c5c7;
   .user {
     display: flex;
     align-items: center;
-    button {
-      cursor: pointer;
-      padding: 6px 36px;
-      margin: 0 8px;
-      font: 12px "IBM Plex Sans";
-      font-weight: 500;
-      border-radius: 5px;
-      border: 1px solid white;
-    }
     .login {
       background: #ff000000;
       color: white;
