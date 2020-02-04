@@ -8,12 +8,16 @@
       <%= link_to  image_tag(@sub.logo, class: 'sub-logo'), root_path %>
       <span class="sub-name">r/<%= @sub.name %></span>
     <% end %>
-    <%= fa_icon "sort-down" %>
+    <%= icon("fa", "sort-down") %>
   </div>
   <div class="search-bar">
     <%= form_tag(search_index_path, method: "get") do %>
-      <%= fa_icon 'search', class: 'search-icon' %>
-      <%= text_field_tag :q, '', placeholder: 'Search r/' + @sub.name %>
+      <%= icon('fas', 'search', class: 'search-icon') %>
+      <% if current_page?(root_path) %>
+        <%= text_field_tag :q, '', placeholder: 'Search ' + @sub.name %>
+      <% else %>
+        <%= text_field_tag :q, '', placeholder: 'Search r/' + @sub.name %>
+      <% end %>
     <% end %>
   </div>
   <div class="icons">
@@ -58,7 +62,7 @@
       <a href="#">
         <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg" class="VIlSggfRUkuuHTKa_h8jp"><g fill="inherit"><path d="M146.8 142.6h-37.6c-31.1 0-56.5 25.3-56.5 56.5 0 5.2 4.2 9.4 9.4 9.4h131.8c5.2 0 9.4-4.2 9.4-9.4 0-31.2-25.3-56.5-56.5-56.5zM128 130.7c20.1 0 36.4-16.3 36.4-36.4v-9.4c0-20.1-16.3-36.4-36.4-36.4S91.6 64.8 91.6 84.9v9.4c0 20.1 16.3 36.4 36.4 36.4z"></path></g></svg>
       </a>
-      <%= fa_icon "sort-down" %>
+      <%= icon("fas", "sort-down") %>
     </div>
   </div>
 </nav>

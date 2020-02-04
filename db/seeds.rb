@@ -33,10 +33,18 @@ Join.create(
   sub_id: 1
 )
 
+Post.create(
+  title: 'My first post',
+  content: 'This is the content',
+  user_id: 1,
+  upvotes: 0,
+  sub_id: 1,
+  complex_id: 'ejbdxb'
+)
+
 Comment.create(
   user_id: 1,
-  sub_id: 1,
-  :complex_id => 'ewqvd',
+  post_id: 1,
   content: 'This is my first comment',
   parent: nil
 )

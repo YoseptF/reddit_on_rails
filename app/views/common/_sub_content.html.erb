@@ -1,6 +1,6 @@
 <div class="timeline">
-<%= render  "common/capsule", inside: (render "common/search_capsule") %>
-  <% @sub.comments.each do  |comment| %>
-    <%= render  "common/capsule", inside: comment.content %>
+<%= render  "common/capsule", type: 'search', inside: (render "common/search_capsule") %>
+  <% @sub.posts.each do  |post| %>
+    <%= render  "common/capsule", type: 'comment', inside: (render "common/comment", post: post) %>
   <% end %>
 </div>

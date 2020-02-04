@@ -10,7 +10,7 @@ class SubController < ApplicationController
   end
 
   def only_id
-    @sub = Sub.where(name: params[:sub]).first
+    @sub = Sub.find_by(name: params[:sub])
     redirect_to "/r/#{params[:sub]}/comments/#{params[:id]}/lol"
   end
 
