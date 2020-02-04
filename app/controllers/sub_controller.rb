@@ -13,4 +13,6 @@ class SubController < ApplicationController
     @sub = Sub.where(name: params[:sub]).first
     redirect_to "/r/#{params[:sub]}/comments/#{params[:id]}/lol"
   end
+
+  def submit; end
 end

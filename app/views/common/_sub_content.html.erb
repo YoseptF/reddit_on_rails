@@ -1,1 +1,6 @@
-subcontent
+<div class="timeline">
+<%= render  "common/capsule", inside: (render "common/search_capsule") %>
+  <% @sub.comments.each do  |comment| %>
+    <%= render  "common/capsule", inside: comment.content %>
+  <% end %>
+</div>
