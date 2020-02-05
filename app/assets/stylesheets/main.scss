@@ -277,3 +277,121 @@ a {
     }
   }
 }
+
+.signup-modal {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease-in-out;
+  background: rgba(0, 0, 0, 0.658);
+  z-index: 100;
+  .message {
+    width: 750px;
+    height: 550px;
+    background: white;
+    position: relative;
+    .left-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 150px;
+    }
+    .signup-close {
+      position: absolute;
+      top: 12px;
+      padding: 5px 8px;
+      border-radius: 50px;
+      right: 15px;
+      &:hover {
+        background: rgba(128, 128, 128, 0.411);
+        cursor: pointer;
+      }
+    }
+    .message-wrapper {
+      margin-left: 150px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .main-message {
+        padding: 24px;
+        .signup-form {
+          display: flex;
+          flex-direction: column;
+          h1 {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            max-width: 380px;
+          }
+          .description {
+            margin-bottom: 10px;
+            color: rgb(247, 56, 56);
+          }
+          .email-field {
+            border: none;
+            position: relative;
+            max-width: 392px;
+            input {
+              padding-right: 36px;
+              border-color: #24a0ed;
+              padding: 22px 12px 10px;
+              border: 1px solid #32a0ed;
+              border-radius: 4px;
+              width: 100%;
+            }
+            label {
+              position: absolute;
+              left: 15px;
+              top: 14px;
+              line-height: 23px;
+              font-size: 11px;
+              font-weight: 600;
+              color: #a5a4a4
+            }
+            input:not([value=""]) + label,
+            input:hover + label,
+            input:active + label {
+              top: 0px;
+              left: 11px;
+              font-size: 9px;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+          .submit {
+            margin-top: 24px;
+            background: #3394dc;
+            border-radius: 4px;
+            max-height: 35px;
+            max-width: 155px;
+            padding: 8px 6px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.5 linear;
+            &:hover {
+              background: #3393dcd2;
+            }
+          }
+          span {
+            font-size: 11px;
+            margin: 8px 0 20px;
+            font-family: sans;
+          }
+          p {
+            font-size: 11px;
+            margin: 20px 0 10px;
+            max-width: 330px;
+          }
+        }
+      }
+    }
+  }
+}
