@@ -9,6 +9,8 @@
 User.create(
   name: 'Joseph Flores',
   user: 'Yosept',
+  password: 'lol123',
+  password_confirmation: 'lol123',
   description: "I'm a programmer",
   email: "yosept.flores@gmail.com"
 )
