@@ -12,7 +12,7 @@ window.onload = event => {
     let email_input = $('#email')
     // check email when mouse leave
     email_input.on('mouseleave', function (event) {
-      let email_regex = /\S+@\S+\.\S+/;
+      let email_regex = /^[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+$/;
     // fill the description if needed 
       if (!email_regex.test(this.value) && this.value != '')
         $('.description').innerHTML = '<p>The email has an incorrect format</p>'
