@@ -4,7 +4,7 @@
     <div class="left-image" style="background-image: url(<%= asset_path('art.png') %>)"></div>
     <div class="message-wrapper">
       <div class="main-message">
-        <%= form_tag(search_index_path, method: "get", class: 'signup-form') do %>
+        <%= form_tag(confirmation_path, method: "get", class: 'signup-form') do %>
           <h1>By having a Reddit account, you can join, vote, and comment on all your favorite Reddit content.</h1>
           <div class="description"></div>
           <%= field_set_tag nil, class: 'email-field' do %>
